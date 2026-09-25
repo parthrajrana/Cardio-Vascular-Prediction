@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ─── CardioLens Apple-Style Clean Design System ─────────────────────────────── */
+:root {
+  /* Clean Light Background Palette */
+  --bg-app:            #F5F5F7;
+  --bg-surface:        #FFFFFF;
+  --bg-surface-2:      #F5F5F7;
+  --bg-surface-hover:  #E8E8ED;
+  --bg-glass:          rgba(255, 255, 255, 0.7);
+  --bg-glass-light:    rgba(255, 255, 255, 0.4);
+
+  /* Text */
+  --text-main:         #1D1D1F;
+  --text-muted:        #86868B;
+  --text-subtle:       #86868B;
+  --text-on-dark:      #FFFFFF;
+
+  /* Primary Accent — Apple Blue or Neutral */
+  --accent-teal:       #0071E3; /* Apple Blue */
+  --accent-teal-dark:  #0077ED;
+  --accent-teal-glow:  rgba(0, 113, 227, 0.2);
+  --accent-teal-subtle:rgba(0, 113, 227, 0.08);
+  --accent-teal-light: #E8F0FE;
+
+  /* Secondary Accent */
+  --accent-violet:     #5E5CE6;
+  --accent-violet-glow:rgba(94, 92, 230, 0.2);
+  --accent-violet-subtle:rgba(94, 92, 230, 0.08);
+
+  /* Tertiary — Emerald */
+  --emerald-500:       #34C759;
+  --emerald-700:       #248A3D;
+
+  /* Status Colors */
+  --status-good-bg:    #E3F5E1;
+  --status-good-text:  #248A3D;
+  --status-good-border:#34C759;
+
+  --status-warn-bg:    #FFF5D9;
+  --status-warn-text:  #B57D00;
+  --status-warn-border:#FFCC00;
+
+  --status-danger-bg:  #FCE4E4;
+  --status-danger-text:#C21E1E;
+  --status-danger-border:#FF3B30;
+
+  /* Borders */
+  --border-subtle:     rgba(0, 0, 0, 0.08);
+  --border-strong:     rgba(0, 0, 0, 0.16);
+  --border-teal:       rgba(0, 113, 227, 0.3);
+  --border-violet:     rgba(94, 92, 230, 0.3);
+
+  /* Radius */
+  --radius-sm:         8px;
+  --radius-md:         12px;
+  --radius-lg:         18px;
+  --radius-xl:         24px;
+  --radius-2xl:        32px;
+  --radius-full:       9999px;
+
+  /* Shadows */
+  --shadow-sm:         0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md:         0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg:         0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-teal:       0 4px 16px rgba(0, 113, 227, 0.2);
+  --shadow-violet:     0 4px 16px rgba(94, 92, 230, 0.2);
+
+  /* Typography */
+  --font-sans:         -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:         "SF Mono", 'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --transition-fast:   0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-base:   0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow:   0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ─── Reset ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 15px; /* Apple uses ~15px or 17px */
+  line-height: 1.47059;
+  color: var(--text-main);
+  background-color: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-image: none; /* Clean background */
+}
+
+/* ─── Typography Defaults ────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600; /* Apple often uses semibold */
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-teal);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: var(--font-sans);
+  font-size: 15px;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ─── Eyebrow & Badges ──────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── Status Badges ───────────────────────────────── */
+.fit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.fit-badge--good-fit {
+  background-color: var(--status-good-bg);
+  color: var(--status-good-text);
+}
+
+.fit-badge--possible-overfitting {
+  background-color: var(--status-warn-bg);
+  color: var(--status-warn-text);
+}
+
+.fit-badge--possible-underfitting {
+  background-color: var(--status-danger-bg);
+  color: var(--status-danger-text);
+}
+
+.fit-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* ─── Primary & Secondary Buttons ───────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  font-size: 15px;
+  transition: all var(--transition-fast);
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--text-main);
+  color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover {
+  background: #000000;
+  transform: scale(1.02);
+}
+
+.btn--outline {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
+}
+
+.btn--outline:hover {
+  background-color: var(--bg-surface-hover);
+  transform: scale(1.02);
+}
+
+.btn--ghost {
+  color: var(--text-main);
+}
+
+.btn--ghost:hover {
+  background-color: var(--border-subtle);
+}
+
+/* ─── Scrollbar Customization ───────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Global Glass Card ─────────────────────────── */
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}

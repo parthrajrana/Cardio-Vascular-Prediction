@@ -1,0 +1,28 @@
+.prediction-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.disclaimer-banner {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.disclaimer-banner strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.disclaimer-banner-icon {
+  color: var(--accent-teal);
+  flex-shrink: 0;
+}

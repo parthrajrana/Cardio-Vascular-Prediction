@@ -1,0 +1,119 @@
+{
+  "model_results": [
+    {
+      "name": "Random Forest",
+      "accuracy": 0.7335,
+      "precision": 0.7545,
+      "recall": 0.6838,
+      "f1_score": 0.7174,
+      "train_score": 0.7547,
+      "test_score": 0.7335,
+      "cv_mean": 0.7342,
+      "cv_std": 0.0029,
+      "fit_status": "Good fit"
+    },
+    {
+      "name": "Gradient Boosting",
+      "accuracy": 0.7329,
+      "precision": 0.749,
+      "recall": 0.6919,
+      "f1_score": 0.7193,
+      "train_score": 0.7352,
+      "test_score": 0.7329,
+      "cv_mean": 0.7338,
+      "cv_std": 0.0041,
+      "fit_status": "Good fit"
+    },
+    {
+      "name": "Logistic Regression",
+      "accuracy": 0.7255,
+      "precision": 0.7506,
+      "recall": 0.6666,
+      "f1_score": 0.7061,
+      "train_score": 0.7277,
+      "test_score": 0.7255,
+      "cv_mean": 0.7275,
+      "cv_std": 0.0033,
+      "fit_status": "Good fit"
+    },
+    {
+      "name": "AdaBoost",
+      "accuracy": 0.725,
+      "precision": 0.7646,
+      "recall": 0.6417,
+      "f1_score": 0.6978,
+      "train_score": 0.726,
+      "test_score": 0.725,
+      "cv_mean": 0.727,
+      "cv_std": 0.0027,
+      "fit_status": "Good fit"
+    }
+  ],
+  "model_results_dict": {
+    "Logistic Regression": {
+      "name": "Logistic Regression",
+      "accuracy": 0.7255,
+      "precision": 0.7506,
+      "recall": 0.6666,
+      "f1_score": 0.7061,
+      "train_score": 0.7277,
+      "test_score": 0.7255,
+      "cv_mean": 0.7275,
+      "cv_std": 0.0033,
+      "fit_status": "Good fit"
+    },
+    "Random Forest": {
+      "name": "Random Forest",
+      "accuracy": 0.7335,
+      "precision": 0.7545,
+      "recall": 0.6838,
+      "f1_score": 0.7174,
+      "train_score": 0.7547,
+      "test_score": 0.7335,
+      "cv_mean": 0.7342,
+      "cv_std": 0.0029,
+      "fit_status": "Good fit"
+    },
+    "AdaBoost": {
+      "name": "AdaBoost",
+      "accuracy": 0.725,
+      "precision": 0.7646,
+      "recall": 0.6417,
+      "f1_score": 0.6978,
+      "train_score": 0.726,
+      "test_score": 0.725,
+      "cv_mean": 0.727,
+      "cv_std": 0.0027,
+      "fit_status": "Good fit"
+    },
+    "Gradient Boosting": {
+      "name": "Gradient Boosting",
+      "accuracy": 0.7329,
+      "precision": 0.749,
+      "recall": 0.6919,
+      "f1_score": 0.7193,
+      "train_score": 0.7352,
+      "test_score": 0.7329,
+      "cv_mean": 0.7338,
+      "cv_std": 0.0041,
+      "fit_status": "Good fit"
+    }
+  },
+  "best_model_name": "Random Forest",
+  "tuning_results": {
+    "model_name": "Random Forest",
+    "best_params": {
+      "max_depth": 12,
+      "min_samples_split": 2,
+      "n_estimators": 80
+    },
+    "before_tuning_score": 0.7335,
+    "after_tuning_score": 0.7336,
+    "improvement": 0.0001,
+    "improvement_percent": "+0.01%",
+    "best_cv_score": 0.7345,
+    "tuned_precision": 0.7545,
+    "tuned_recall": 0.684,
+    "tuned_f1": 0.7175
+  }
+}
